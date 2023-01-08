@@ -10,4 +10,7 @@ resource "aws_instance" "VM_Ec2" {
   tags = {
     Name = "ec2-machine-deploy"
   }
+  root_block_device {
+    delete_on_termination = true
+  }
 }
